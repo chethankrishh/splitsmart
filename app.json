@@ -1,15 +1,23 @@
 {
   "expo": {
-    "name": "splitsmart",
+    "name": "SplitSmart",
     "slug": "splitsmart",
     "version": "1.0.0",
+    "scheme": "splitsmart",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.splitsmart.app"
     },
     "android": {
+      "package": "com.splitsmart.app",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
         "foregroundImage": "./assets/android-icon-foreground.png",
@@ -18,7 +26,16 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "typedRoutes": true
     }
   }
 }
